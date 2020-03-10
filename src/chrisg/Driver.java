@@ -146,13 +146,12 @@ public class Driver {
 
     private static int randomNumber(int min, int max){
         Random random = new Random();
-        int rand = random.nextInt(max + 1 - min) + min;
-        return rand;
+        return random.nextInt(max + 1 - min) + min;
     }
 
     public static HashMap<Integer, ParkingTicket> addTicket(HashMap<Integer, ParkingTicket> t){
         ParkingTicket ticket = new ParkingTicket();
-
+// 13 - 23 represents 1pm to 11pm
         ticket.setTimeIn(LocalTime.of(randomNumber(7, 12),0));
         ticket.setTimeOut(LocalTime.of(randomNumber(13, 23),0));
 
